@@ -1,0 +1,132 @@
+# Modus Operandi: opaque surfaces and visible keyboard focus.
+[bar]
+background = "#f2f2f2"
+background-alpha = 1
+text = "#000000"
+active = "#a60000"
+scale-with-font = true
+size-horizontal = 30
+size-vertical = 32
+
+[hyprland]
+active-border = "#0031a9"
+active-border-foreground = "#0031a9"
+
+[controls]
+normal-color = "#000000"
+normal-fill-alpha = 0.02
+normal-border = "#474747"
+normal-border-width = 1
+normal-border-alpha = 1
+hover-cursor-color = "#000000"
+hover-cursor-fill-alpha = 0.06
+hover-cursor-border = "#0031a9"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 1
+focus-color = "#000000"
+focus-fill-alpha = 0.06
+focus-border = "#0031a9"
+focus-border-width = 2
+focus-border-alpha = 1
+selected-color = "#000000"
+selected-fill-alpha = 0.14
+selected-border = "#0031a9"
+selected-border-width = 2
+selected-border-alpha = 1
+pressed-fill-alpha = 0.18
+selection-fill-alpha = 0.26
+
+[spacing]
+scale = 1
+scale-with-font = true
+popup-row-height = 32
+control-height = 30
+
+[font]
+base-size = 12
+
+[popups]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#0031a9"
+border-alpha = 1
+border-width = 2
+
+[tooltip]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#474747"
+border-alpha = 1
+
+[notifications]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#0031a9"
+border-alpha = 1
+border-width = 2
+countdown = "#0031a9"
+
+[launcher]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#0031a9"
+border-alpha = 1
+scrim = "#ffffff"
+scrim-alpha = 0.8
+selected-background = "#c0deff"
+selected-background-alpha = 1
+selected-text = "#000000"
+selected-border = "#0031a9"
+selected-border-alpha = 1
+
+[menu]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#0031a9"
+border-alpha = 1
+scrim = "#ffffff"
+scrim-alpha = 0.8
+selected-background = "#c0deff"
+selected-background-alpha = 1
+selected-text = "#000000"
+selected-border = "#0031a9"
+selected-border-alpha = 1
+
+[polkit]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#0031a9"
+border-alpha = 1
+scrim = "#ffffff"
+scrim-alpha = 0.8
+text-error = "#a60000"
+border-error = "#a60000"
+accent = "#0031a9"
+
+[lock]
+background = "#ffffff"
+background-alpha = 1
+text = "#000000"
+border = "#474747"
+border-alpha = 1
+text-error = "#a60000"
+border-error = "#a60000"
+placeholder = "#474747"
+border-active = "#0031a9"
+selection = "#bdbdbd"
+selection-alpha = 1
+
+[image-picker]
+scrim = "#ffffff"
+scrim-alpha = 0.9
+text = "#000000"
+selected-border = "#0031a9"
+selected-border-alpha = 1
+unselected-border = "#9f9f9f"
+unselected-border-alpha = 1

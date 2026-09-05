@@ -1,0 +1,48 @@
+[window]
+opacity = 1
+
+[colors.primary]
+background = "#ffffff"
+foreground = "#000000"
+dim_foreground = "#474747"
+bright_foreground = "#000000"
+
+[colors.cursor]
+text = "#ffffff"
+cursor = "#000000"
+
+[colors.vi_mode_cursor]
+text = "#ffffff"
+cursor = "#0031a9"
+
+[colors.selection]
+text = "#000000"
+background = "#bdbdbd"
+
+[colors.search.matches]
+foreground = "#000000"
+background = "#a4d5f9"
+
+[colors.search.focused_match]
+foreground = "#000000"
+background = "#f3d000"
+
+[colors.normal]
+black = "#000000"
+red = "#a60000"
+green = "#006800"
+yellow = "#6f5500"
+blue = "#0031a9"
+magenta = "#721045"
+cyan = "#005e8b"
+white = "#a6a6a6"
+
+[colors.bright]
+black = "#595959"
+red = "#972500"
+green = "#00663f"
+yellow = "#884900"
+blue = "#3548cf"
+magenta = "#531ab6"
+cyan = "#005f5f"
+white = "#ffffff"

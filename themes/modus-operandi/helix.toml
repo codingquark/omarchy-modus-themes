@@ -1,0 +1,133 @@
+# Syntax
+"keyword" = "#531ab6"
+"keyword.control" = "#531ab6"
+"function" = "#721045"
+"function.builtin" = "#8f0075"
+"function.macro" = "#8f0075"
+"type" = "#005f5f"
+"type.builtin" = "#005f5f"
+"type.enum.variant" = "color6"
+"constructor" = "#005f5f"
+"constant" = "color3"
+"constant.builtin" = "color3"
+"constant.numeric" = "#000000"
+"constant.character" = "color6"
+"constant.character.escape" = "color5"
+"string" = "#3548cf"
+"string.regexp" = "color5"
+"string.special" = "color4"
+"comment" = "#595959"
+"variable" = "#005e8b"
+"variable.parameter" = "#005e8b"
+"variable.builtin" = "color1"
+"variable.other.member" = "#005e8b"
+"label" = "color4"
+"punctuation" = "#000000"
+"punctuation.special" = "color6"
+"operator" = "#000000"
+"tag" = "color4"
+"namespace" = { fg = "color3", modifiers = ["italic"] }
+"special" = "color5"
+"attribute" = "color3"
+
+# Markup
+"markup.heading.1" = { fg = "#000000", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#624416", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#193668", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#721045", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#2a5045", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "#7f0000", modifiers = ["bold"] }
+"markup.list" = "color6"
+"markup.list.unchecked" = "color8"
+"markup.list.checked" = "color2"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "color4", modifiers = ["italic", "underlined"] }
+"markup.link.text" = "color5"
+"markup.link.label" = "color4"
+"markup.raw" = "color2"
+"markup.quote" = "color5"
+
+# Diff
+"diff.plus" = "color2"
+"diff.minus" = "color1"
+"diff.delta" = "color4"
+
+# Opaque canvas preserves contrast.
+"ui.background" = { fg = "#000000", bg = "#ffffff" }
+
+"ui.linenr" = { fg = "#474747", bg = "#f2f2f2" }
+"ui.linenr.selected" = { fg = "#000000", bg = "#f2f2f2", modifiers = ["bold"] }
+
+# Statusline uses an inverted band (background-color text on foreground-color
+# background) to guarantee contrast across both light and dark Omarchy themes.
+"ui.statusline" = { fg = "#000000", bg = "#c8c8c8" }
+"ui.statusline.inactive" = { fg = "#474747", bg = "#e6e6e6" }
+"ui.statusline.normal" = { fg = "#000000", bg = "#c8c8c8", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "#000000", bg = "#b3fabf", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "#000000", bg = "#ffddff", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "foreground", bg = "background" }
+"ui.window" = { fg = "color8" }
+"ui.help" = { fg = "foreground", bg = "background" }
+
+"ui.bufferline" = { fg = "color8", bg = "background" }
+"ui.bufferline.active" = { fg = "foreground", bg = "background", underline = { color = "color5", style = "line" } }
+
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "#000000", bg = "#c0deff", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "color8" }
+"ui.text.directory" = { fg = "color4" }
+
+"ui.virtual" = "color8"
+"ui.virtual.ruler" = { bg = "lighter_background" }
+"ui.virtual.indent-guide" = "color8"
+"ui.virtual.inlay-hint" = { fg = "color8" }
+"ui.virtual.jump-label" = { fg = "color1", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "color8"
+
+"ui.selection" = { fg = "#000000", bg = "#bdbdbd" }
+
+"ui.cursor" = { fg = "background", bg = "cursor" }
+"ui.cursor.primary" = { fg = "background", bg = "cursor" }
+"ui.cursor.match" = { fg = "#000000", bg = "#5fcfff", modifiers = ["bold"] }
+"ui.cursor.primary.normal" = { fg = "background", bg = "cursor" }
+"ui.cursor.primary.insert" = { fg = "background", bg = "color2" }
+"ui.cursor.primary.select" = { fg = "background", bg = "color5" }
+
+"ui.cursorline.primary" = { bg = "#ffffff" }
+
+"ui.highlight" = { bg = "lighter_background", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "foreground", bg = "background" }
+"ui.menu.selected" = { fg = "#000000", bg = "#c0deff", modifiers = ["bold"] }
+
+"diagnostic.error" = { underline = { color = "color1", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "color3", style = "curl" } }
+"diagnostic.info" = { underline = { color = "color4", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "color6", style = "curl" } }
+"diagnostic.unnecessary" = "#474747"
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+error = "color1"
+warning = "color3"
+info = "color4"
+hint = "color6"
+
+[palette]
+background = "#ffffff"
+foreground = "#000000"
+lighter_background = "#f2f2f2"
+cursor = "#000000"
+selection_background = "#bdbdbd"
+selection_foreground = "#000000"
+color0 = "#ffffff"
+color1 = "#a60000"
+color2 = "#006800"
+color3 = "#6f5500"
+color4 = "#0031a9"
+color5 = "#721045"
+color6 = "#005e8b"
+color7 = "#000000"
+color8 = "#474747"

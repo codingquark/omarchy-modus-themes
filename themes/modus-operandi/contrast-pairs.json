@@ -1,0 +1,632 @@
+[
+  {
+    "name": "foreground on canvas",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "muted on canvas",
+    "fg": "#474747",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "light_foreground on canvas",
+    "fg": "#193668",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "red on canvas",
+    "fg": "#a60000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "green on canvas",
+    "fg": "#006800",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "yellow on canvas",
+    "fg": "#6f5500",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "blue on canvas",
+    "fg": "#0031a9",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "magenta on canvas",
+    "fg": "#721045",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "cyan on canvas",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_red on canvas",
+    "fg": "#972500",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_green on canvas",
+    "fg": "#00663f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_yellow on canvas",
+    "fg": "#884900",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_blue on canvas",
+    "fg": "#3548cf",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_magenta on canvas",
+    "fg": "#531ab6",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "bright_cyan on canvas",
+    "fg": "#005f5f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "secondary text on chrome",
+    "fg": "#474747",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "secondary text on inactive surface",
+    "fg": "#474747",
+    "bg": "#e0e0e0",
+    "min": 7
+  },
+  {
+    "name": "bar alert",
+    "fg": "#a60000",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "selection",
+    "fg": "#000000",
+    "bg": "#bdbdbd",
+    "min": 7
+  },
+  {
+    "name": "completion",
+    "fg": "#000000",
+    "bg": "#c0deff",
+    "min": 7
+  },
+  {
+    "name": "completion match",
+    "fg": "#0031a9",
+    "bg": "#c0deff",
+    "min": 7
+  },
+  {
+    "name": "inactive status line",
+    "fg": "#474747",
+    "bg": "#e6e6e6",
+    "min": 7
+  },
+  {
+    "name": "lock placeholder",
+    "fg": "#474747",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "search",
+    "fg": "#000000",
+    "bg": "#f3d000",
+    "min": 7
+  },
+  {
+    "name": "lazySearch",
+    "fg": "#000000",
+    "bg": "#a4d5f9",
+    "min": 7
+  },
+  {
+    "name": "paren",
+    "fg": "#000000",
+    "bg": "#5fcfff",
+    "min": 7
+  },
+  {
+    "name": "insertStatus",
+    "fg": "#000000",
+    "bg": "#b3fabf",
+    "min": 7
+  },
+  {
+    "name": "selectStatus",
+    "fg": "#000000",
+    "bg": "#ffddff",
+    "min": 7
+  },
+  {
+    "name": "focus border",
+    "fg": "#0031a9",
+    "bg": "#ffffff",
+    "min": 3
+  },
+  {
+    "name": "focus border on selection",
+    "fg": "#0031a9",
+    "bg": "#c0deff",
+    "min": 3
+  },
+  {
+    "name": "normal control text",
+    "fg": "#000000",
+    "bg": "#fafafa",
+    "min": 7
+  },
+  {
+    "name": "normal control border",
+    "fg": "#0031a9",
+    "bg": "#fafafa",
+    "min": 3
+  },
+  {
+    "name": "hover control text",
+    "fg": "#000000",
+    "bg": "#f0f0f0",
+    "min": 7
+  },
+  {
+    "name": "hover control border",
+    "fg": "#0031a9",
+    "bg": "#f0f0f0",
+    "min": 3
+  },
+  {
+    "name": "focus control text",
+    "fg": "#000000",
+    "bg": "#f0f0f0",
+    "min": 7
+  },
+  {
+    "name": "focus control border",
+    "fg": "#0031a9",
+    "bg": "#f0f0f0",
+    "min": 3
+  },
+  {
+    "name": "selected control text",
+    "fg": "#000000",
+    "bg": "#dbdbdb",
+    "min": 7
+  },
+  {
+    "name": "selected control border",
+    "fg": "#0031a9",
+    "bg": "#dbdbdb",
+    "min": 3
+  },
+  {
+    "name": "pressed control text",
+    "fg": "#000000",
+    "bg": "#d1d1d1",
+    "min": 7
+  },
+  {
+    "name": "pressed control border",
+    "fg": "#0031a9",
+    "bg": "#d1d1d1",
+    "min": 3
+  },
+  {
+    "name": "Neovim Normal",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim NormalNC",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim NormalFloat",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim FloatBorder",
+    "fg": "#0031a9",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Comment",
+    "fg": "#595959",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Constant",
+    "fg": "#0000b0",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim String",
+    "fg": "#3548cf",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Character",
+    "fg": "#3548cf",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Number",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Boolean",
+    "fg": "#0000b0",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Identifier",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Function",
+    "fg": "#721045",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Statement",
+    "fg": "#531ab6",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Keyword",
+    "fg": "#531ab6",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim PreProc",
+    "fg": "#a0132f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Type",
+    "fg": "#005f5f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Special",
+    "fg": "#8f0075",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Delimiter",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Operator",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim LineNr",
+    "fg": "#474747",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim CursorLineNr",
+    "fg": "#000000",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim Visual",
+    "fg": "#000000",
+    "bg": "#bdbdbd",
+    "min": 7
+  },
+  {
+    "name": "Neovim Search",
+    "fg": "#000000",
+    "bg": "#a4d5f9",
+    "min": 7
+  },
+  {
+    "name": "Neovim IncSearch",
+    "fg": "#000000",
+    "bg": "#f3d000",
+    "min": 7
+  },
+  {
+    "name": "Neovim CurSearch",
+    "fg": "#000000",
+    "bg": "#f3d000",
+    "min": 7
+  },
+  {
+    "name": "Neovim MatchParen",
+    "fg": "#000000",
+    "bg": "#5fcfff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Pmenu",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim PmenuSel",
+    "fg": "#000000",
+    "bg": "#c0deff",
+    "min": 7
+  },
+  {
+    "name": "Neovim StatusLine",
+    "fg": "#000000",
+    "bg": "#c8c8c8",
+    "min": 7
+  },
+  {
+    "name": "Neovim StatusLineNC",
+    "fg": "#474747",
+    "bg": "#e6e6e6",
+    "min": 7
+  },
+  {
+    "name": "Neovim TabLine",
+    "fg": "#474747",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim TabLineSel",
+    "fg": "#000000",
+    "bg": "#c0deff",
+    "min": 7
+  },
+  {
+    "name": "Neovim SignColumn",
+    "fg": "#000000",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim FoldColumn",
+    "fg": "#474747",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim Folded",
+    "fg": "#474747",
+    "bg": "#f2f2f2",
+    "min": 7
+  },
+  {
+    "name": "Neovim Directory",
+    "fg": "#0031a9",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim Title",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim ErrorMsg",
+    "fg": "#a60000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim WarningMsg",
+    "fg": "#884900",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim MoreMsg",
+    "fg": "#005f5f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticError",
+    "fg": "#a60000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticWarn",
+    "fg": "#884900",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticInfo",
+    "fg": "#005f5f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticHint",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticUnnecessary",
+    "fg": "#474747",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiffAdd",
+    "fg": "#005000",
+    "bg": "#c1f2d1",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiffDelete",
+    "fg": "#8f1313",
+    "bg": "#ffd8d5",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiffChange",
+    "fg": "#553d00",
+    "bg": "#ffdfa9",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiffText",
+    "fg": "#000000",
+    "bg": "#fac090",
+    "min": 7
+  },
+  {
+    "name": "Neovim @variable",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @variable.member",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @function.call",
+    "fg": "#7b435c",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @function.builtin",
+    "fg": "#8f0075",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @string.documentation",
+    "fg": "#2a5045",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.link.url",
+    "fg": "#3548cf",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.1",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.2",
+    "fg": "#624416",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.3",
+    "fg": "#193668",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.4",
+    "fg": "#721045",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.5",
+    "fg": "#2a5045",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim @markup.heading.6",
+    "fg": "#7f0000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticVirtualTextError",
+    "fg": "#a60000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticVirtualTextWarn",
+    "fg": "#884900",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticVirtualTextInfo",
+    "fg": "#005f5f",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Neovim DiagnosticVirtualTextHint",
+    "fg": "#005e8b",
+    "bg": "#ffffff",
+    "min": 7
+  }
+]
