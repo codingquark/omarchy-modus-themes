@@ -11,6 +11,7 @@ const templates = join(process.env.OMARCHY_PATH || '/usr/share/omarchy', 'defaul
 const q = JSON.stringify;
 const table = obj => Object.entries(obj).map(([k,v]) => `${k} = ${q(v)}`).join('\n') + '\n';
 const section = (name,obj) => `[${name}]\n${table(obj)}\n`;
+const triplet = hex => hex.slice(1).match(/../g).map(v => parseInt(v,16)).join(',');
 const names = ['black','red','green','yellow','blue','magenta','cyan','white'];
 const templateCache = new Map();
 const variants = process.argv.slice(2);
@@ -63,7 +64,8 @@ for (const name of variants.length ? variants : ['modus-operandi','modus-vivendi
   write('colors.toml',`# ${title}: Modus Themes 5.2.0, explicit semantic roles.\n`+table(p));
   if (!dark) write('light.mode','');
   write('icons.theme',dark ? 'Yaru-blue-dark\n' : 'Yaru-blue\n');
-  write('chromium.theme',(dark ? '18,21,74' : '236,237,255')+'\n');
+  // Neutral seed for Chromium's generated theme.
+  write('chromium.theme',triplet(s.dim)+'\n');
 
   let shell=`# ${title}: opaque surfaces and visible keyboard focus.\n`;
   shell+=section('bar',{background:s.dim,'background-alpha':1,text:s.fg,active:s.alert,
