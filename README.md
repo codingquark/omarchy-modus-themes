@@ -92,7 +92,9 @@ plugin. Switching between the two Modus themes uses Omarchy's normal command
 and reload hooks; the package does not change application keybindings.
 
 The generated `shell.toml` includes `[herdr]` colors: `done` uses the variant's
-green and `working` its yellow. The Herdr bar widget must read these with
+green and `working` its yellow. This requires the widget support proposed in
+[omarchy-herdr PR #10](https://github.com/jankeesvw/omarchy-herdr/pull/10).
+The Herdr bar widget must read these with
 `Color.pick("herdr.done", "#5FA46B")` and
 `Color.pick("herdr.working", "#D6A84B")` in `Panel.qml`. This package supplies
 the colors; it does not install or patch the widget. Keep that widget change
