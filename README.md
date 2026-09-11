@@ -91,6 +91,13 @@ The Neovim themes are self-contained for LazyVim and need no additional theme
 plugin. Switching between the two Modus themes uses Omarchy's normal command
 and reload hooks; the package does not change application keybindings.
 
+The generated `shell.toml` includes `[herdr]` colors: `done` uses the variant's
+green and `working` its yellow. The Herdr bar widget must read these with
+`Color.pick("herdr.done", "#5FA46B")` and
+`Color.pick("herdr.working", "#D6A84B")` in `Panel.qml`. This package supplies
+the colors; it does not install or patch the widget. Keep that widget change
+when updating the plugin.
+
 The 16 ANSI slots retain their upstream values, independently of desktop
 surface roles. ANSI white on white, black on black, dim escape sequences,
 and app-selected true-color combinations can be unreadable. Some running

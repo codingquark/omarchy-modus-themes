@@ -130,3 +130,7 @@ selected-border = "#00bcff"
 selected-border-alpha = 1
 unselected-border = "#646464"
 unselected-border-alpha = 1
+
+[herdr]
+done = "#44bc44"
+working = "#d0bc00"

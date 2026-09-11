@@ -97,6 +97,7 @@ for (const name of variants.length ? variants : ['modus-operandi','modus-vivendi
   }
   shell+=section('image-picker',{scrim:s.bg,'scrim-alpha':0.9,text:s.fg,
     'selected-border':s.accent,'selected-border-alpha':1,'unselected-border':s.border,'unselected-border-alpha':1});
+  shell+=section('herdr',{done:u.green,working:u.yellow});
   write('shell.toml',shell);
 
   const rgb=hex=>`rgb(${hex.slice(1)})`;
