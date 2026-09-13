@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Keep Cliamp's live theme and next launch in sync with Omarchy.
+set -euo pipefail
+cliamp_dir=${CLIAMP_CONFIG_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/cliamp}
+config="$cliamp_dir/config.toml"
+case ${1:-} in
+  modus-operandi|modus-vivendi)
+    selected=$1
+    [[ -f $cliamp_dir/themes/$selected.toml ]] || exit 0
+    ;;
+  *)
+    # Release our selection when leaving Modus; preserve other custom themes.
+    [[ -f $config ]] || exit 0
+    current=$(awk '/^[[:space:]]*\[/ {exit} /^[[:space:]]*theme[[:space:]]*=/ {print}' "$config")
+    [[ $current =~ \"modus-(operandi|vivendi)\" ]] || exit 0
+    selected=''
+    ;;
+esac
+
+if [[ -f $config && ! -e $config.before-modus ]]; then
+  cp -p -- "$config" "$config.before-modus"
+fi
+
+# Cliamp reloads custom themes and saves this choice when running.
+if command -v cliamp >/dev/null && timeout 5 cliamp theme "${selected:-Default - Terminal colors}" >/dev/null 2>&1; then
+  exit 0
+fi
+
+# When closed, update only the top-level theme key, preserving provider config.
+mkdir -p -- "$cliamp_dir"
+scratch=$(mktemp "$cliamp_dir/.modus-theme.XXXXXX")
+trap 'rm -f -- "$scratch"' EXIT
+input=/dev/null
+[[ ! -f $config ]] || input=$config
+awk -v selected="$selected" '
+  BEGIN { setting = "theme = \"" selected "\"" }
+  !section && /^[[:space:]]*\[/ {
+    if (!found) print setting
+    found = 1; section = 1
+  }
+  !section && /^[[:space:]]*theme[[:space:]]*=/ {
+    if (!found) print setting
+    found = 1; next
+  }
+  { print }
+  END { if (!found) print setting }
+' "$input" >"$scratch"
+if [[ -f $config ]]; then
+  cmp -s -- "$config" "$scratch" && exit 0
+  # Preserve a user's config symlink and permissions.
+  cat "$scratch" >"$config"
+else
+  mv -- "$scratch" "$config"
+fi

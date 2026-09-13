@@ -1,5 +1,47 @@
 [
   {
+    "name": "Cliamp bright_fg",
+    "fg": "#000000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp fg",
+    "fg": "#474747",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp accent",
+    "fg": "#0031a9",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp green",
+    "fg": "#006800",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp yellow",
+    "fg": "#6f5500",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp red",
+    "fg": "#a60000",
+    "bg": "#ffffff",
+    "min": 7
+  },
+  {
+    "name": "Cliamp help key",
+    "fg": "#ffffff",
+    "bg": "#0031a9",
+    "min": 7
+  },
+  {
     "name": "foreground on canvas",
     "fg": "#000000",
     "bg": "#ffffff",

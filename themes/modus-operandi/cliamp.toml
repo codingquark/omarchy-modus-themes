@@ -1,0 +1,8 @@
+# Modus Operandi: explicit colors for Cliamp 2.x.
+bg = "#ffffff"
+accent = "#0031a9"
+bright_fg = "#000000"
+fg = "#474747"
+green = "#006800"
+yellow = "#6f5500"
+red = "#a60000"

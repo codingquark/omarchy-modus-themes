@@ -26,8 +26,10 @@ cd "$HOME/Projects/omarchy-modus-themes"
 bash install.sh
 ```
 
-The installer creates local symlinks under `~/.config/omarchy/themes`, refuses
-to replace unrelated files or themes, and leaves the current theme active.
+The installer creates local symlinks under `~/.config/omarchy/themes`, registers
+the Cliamp palettes and theme-change hook, refuses to replace unrelated files
+or themes, and leaves the current desktop theme active. If a Modus theme is
+already active, it also applies the matching Cliamp palette.
 Running it again is safe. No downloads, dependency installations, or build
 steps happen inside the installer.
 
@@ -45,9 +47,12 @@ The local symlinks also preserve the reviewed per-application configurations;
 Omarchy regenerates terminal and Lua configs when importing single-theme Git
 repositories directly.
 
-To update, pull changes in the checkout and reapply your selected theme.
+To update, pull changes in the checkout, rerun `bash install.sh` to register
+new integrations, and reapply your selected theme.
 To uninstall, switch to another theme and remove only the two installed
-symlinks. The checkout can remain for future use.
+theme symlinks, `~/.config/cliamp/themes/modus-{operandi,vivendi}.toml`, and
+`~/.config/omarchy/hooks/theme-set.d/85-cliamp-modus`.
+The checkout can remain for future use.
 
 ## Design
 
@@ -80,7 +85,7 @@ only its wallpaper.
 - Quickshell bar, popups, notifications, launcher, menus, controls, authentication, and lock input.
 - Hyprland borders, grouped-window labels, and opaque default application windows.
 - Ghostty, Kitty, Alacritty, and Foot, including cursor and selection colors.
-- btop, Helix, LazyVim/Neovim, and VS Code's local Omarchy theme.
+- Cliamp, btop, Helix, LazyVim/Neovim, and VS Code's local Omarchy theme.
 - Native light/dark mode, coordinated Yaru icons, and browser tint.
 - Other Omarchy integrations receive each theme's explicit semantic palette through installed templates.
 
@@ -106,6 +111,16 @@ and app-selected true-color combinations can be unreadable. Some running
 programs need reopening after switching themes, and existing true-color
 scrollback does not automatically change.
 
+Cliamp (the music TUI on `Super+Shift+Alt+M`) gets explicit primary, secondary,
+selection, and status colors because its default ANSI palette assumes a dark
+terminal. The included hook updates a running Cliamp 2.x through its theme
+command and saves the selection for the next launch when it is closed. It
+preserves other configuration keys and backs up an existing config once to
+`config.toml.before-modus`. Leaving Modus restores Cliamp's terminal palette
+if its saved theme is still one of ours; other manually selected themes are
+left alone. Cliamp's `CLIAMP_CONFIG_DIR` and `XDG_CONFIG_HOME` overrides are
+honored when present in the installer and hook environment.
+
 This is **not a claim of universal desktop WCAG conformance**. Authored text
 and focus pairs are checked, but every third-party application, plugin, and
 website has not been audited. When reporting a problem, include the variant,
@@ -128,7 +143,7 @@ shared face mappings and explicit per-variant surface adaptations. It writes
 application configurations and contrast manifests under `themes/`, plus SVG
 artwork under `artwork/`. Edit those source inputs for durable changes.
 
-Each theme checks 105 authored color pairs, including secondary text,
+Each theme checks 112 authored color pairs, including Cliamp text, secondary text,
 selection, search, control states, focus borders, and Neovim faces. Text pairs
 must reach 7:1; focus indicators must reach 3:1. These measurements complement
 configuration validation and live desktop inspection.

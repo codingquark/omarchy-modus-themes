@@ -153,6 +153,11 @@ inactive_tab_background ${s.dim}
     +ansi.map((v,i)=>`${i<8?'regular':'bright'}${i%8}=${v.slice(1)}\n`).join('');
   write('foot.ini','[colors-dark]\n'+foot+'\n[colors-light]\n'+foot);
 
+  // Cliamp's ANSI fallback assumes white text on a dark terminal.
+  const cliamp={bg:s.bg,accent:s.accent,bright_fg:s.fg,fg:s.chrome,
+    green:u.green,yellow:u.yellow,red:u.red};
+  write('cliamp.toml',`# ${title}: explicit colors for Cliamp 2.x.\n`+table(cliamp));
+
   let btop=render('btop.theme');
   for (const [key,value] of Object.entries({selected_bg:s.completion,selected_fg:s.fg,
     graph_text:s.fg,proc_misc:u.cyan,cpu_box:s.accent,mem_box:s.accent,net_box:s.accent,proc_box:s.accent,
@@ -308,6 +313,10 @@ ${luaGroups}
 
   const pairs=[];
   const check=(label,fg,bg,min=7)=>pairs.push({name:label,fg,bg,min});
+  for (const key of ['bright_fg','fg','accent','green','yellow','red']) {
+    check('Cliamp '+key,cliamp[key],cliamp.bg);
+  }
+  check('Cliamp help key',s.bg,cliamp.accent);
   for (const key of ['foreground','muted','light_foreground','red','green','yellow','blue','magenta','cyan',
     'bright_red','bright_green','bright_yellow','bright_blue','bright_magenta','bright_cyan']) check(key+' on canvas',p[key],s.bg);
   check('secondary text on chrome',s.chrome,s.dim);

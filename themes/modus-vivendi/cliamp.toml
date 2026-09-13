@@ -1,0 +1,8 @@
+# Modus Vivendi: explicit colors for Cliamp 2.x.
+bg = "#000000"
+accent = "#00bcff"
+bright_fg = "#ffffff"
+fg = "#bfbfbf"
+green = "#44bc44"
+yellow = "#d0bc00"
+red = "#ff5f59"
