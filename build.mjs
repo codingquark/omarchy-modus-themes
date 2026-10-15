@@ -5,6 +5,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join, dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { renderTemplate } from './lib/render-template.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const templates = join(process.env.OMARCHY_PATH || '/usr/share/omarchy', 'default/themed');
@@ -51,15 +52,11 @@ for (const name of variants.length ? variants : ['modus-operandi','modus-vivendi
     hyprland_active_border:s.accent, hyprland_inactive_border:s.border,
   };
   const ansi = names.map(n=>u[`fg-term-${n}`]).concat(names.map(n=>u[`fg-term-${n}-bright`]));
+  const templateValues={...p,cursor:s.fg,purple:p.magenta,theme_type:p.mode,
+    ...Object.fromEntries(ansi.map((value,index)=>[`color${index}`,value]))};
   const render = file => {
     if (!templateCache.has(file)) templateCache.set(file,readFileSync(join(templates,file+'.tpl'),'utf8'));
-    return templateCache.get(file).replace(/\{\{\s*(\w+)\s*\}\}/g,(_,key) => {
-      const aliases={cursor:s.fg,purple:p.magenta,theme_type:p.mode};
-      const value=p[key] ?? (Object.hasOwn(aliases,key) ? aliases[key] : undefined)
-        ?? (/^color\d+$/.test(key) ? ansi[Number(key.slice(5))] : undefined);
-      if (value===undefined) throw new Error(`Unknown template key: ${key}`);
-      return value;
-    });
+    return renderTemplate(templateCache.get(file),templateValues,join(templates,file+'.tpl'));
   };
   write('colors.toml',`# ${title}: Modus Themes 5.2.0, explicit semantic roles.\n`+table(p));
   if (!dark) write('light.mode','');
