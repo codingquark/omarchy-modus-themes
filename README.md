@@ -77,8 +77,8 @@ Some desktop surfaces need contextual adjustments:
 The wallpaper pair uses the same original vector geometry: spacious paper
 planes with a small blue registration line, without logos or fine texture.
 The SVG colors come from each variant's own palette. The files under
-`screenshots/` show real desktop sessions; each theme's `preview.png` previews
-only its wallpaper.
+`screenshots/` show real desktop sessions; the build derives each theme's
+`preview.png` from its matching desktop screenshot for Omarchy's theme picker.
 
 ## Coverage and limits
 
@@ -123,11 +123,16 @@ application, and affected state.
 node build.mjs                  # Build both variants
 node build.mjs modus-vivendi    # Build only the dark variant
 node check.mjs                  # Check both contrast manifests
+node --test                     # Check template rendering regressions
 ```
 
 Building requires Node, ImageMagick, and Omarchy 4's installed templates.
 `OMARCHY_PATH` can point to another Omarchy checkout. Installation uses the
 committed output and does not require these build tools.
+
+The builder supports palette keys, `_strip`/`_rgb` modifiers, and Omarchy's
+`mix`, `mix_strip`, and `mix_rgb` expressions. Unsupported expressions or
+unresolved placeholders fail the build instead of entering generated configs.
 
 `palettes/` contains resolved upstream palette snapshots; `build.mjs` defines
 shared face mappings and explicit per-variant surface adaptations. It writes
