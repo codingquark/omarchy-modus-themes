@@ -77,8 +77,8 @@ Some desktop surfaces need contextual adjustments:
 The wallpaper pair uses the same original vector geometry: spacious paper
 planes with a small blue registration line, without logos or fine texture.
 The SVG colors come from each variant's own palette. The files under
-`screenshots/` show real desktop sessions; each theme's `preview.png` previews
-only its wallpaper.
+`screenshots/` show real desktop sessions; the build derives each theme's
+`preview.png` from its matching desktop screenshot for Omarchy's theme picker.
 
 ## Coverage and limits
 

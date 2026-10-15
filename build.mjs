@@ -309,7 +309,11 @@ ${luaGroups}
   const svgPath=join(root,'artwork',`${name}.svg`);
   writeFileSync(svgPath,svg);
   execFileSync('magick',[svgPath,'-strip',join(out,'backgrounds/01-paper.png')]);
-  execFileSync('magick',[join(out,'backgrounds/01-paper.png'),'-resize','960x540',join(out,'preview.png')]);
+  // The picker previews the desktop; wallpapers remain under backgrounds/.
+  execFileSync('magick',[
+    join(root,'screenshots',`${name}.webp`),'-strip','-resize','960x540>',
+    join(out,'preview.png'),
+  ]);
 
   const pairs=[];
   const check=(label,fg,bg,min=7)=>pairs.push({name:label,fg,bg,min});
