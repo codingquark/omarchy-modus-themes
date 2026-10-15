@@ -13,6 +13,15 @@ test('preserves plain text and replaces palette keys, aliases and ANSI slots', (
   assert.equal(render('no expressions\n'),'no expressions\n');
 });
 
+test('preserves literal closing braces in compact nested JSON', () => {
+  const template = '{"colors":{"editor.background":"{{ background }}","editor.lineHighlightBorder":"{{ mix background foreground 30% }}"}}';
+  assert.deepEqual(JSON.parse(render(template)),{
+    colors:{'editor.background':'#000000','editor.lineHighlightBorder':'#4d4d4d'},
+  });
+  assert.equal(render('{"nested":{"literal":true}}'),'{"nested":{"literal":true}}');
+  assert.equal(render('literal }}'),'literal }}');
+});
+
 test('supports upstream strip and RGB modifiers, with exact-key precedence', () => {
   assert.equal(render('{{ accent_strip }} {{ accent_rgb }} {{ mode_strip }}'),
     'aBcDeF 171,205,239 light');
@@ -67,8 +76,8 @@ test('unsupported expressions and malformed mix amounts fail rather than leak', 
   assert.throws(()=>render(`{{ mix background foreground ${'9'.repeat(400)} }}`),/Invalid mix amount/);
 });
 
-test('dangling, nested, or replacement-introduced delimiters cannot survive', () => {
-  for (const text of ['{{ background','background }}','{{ {{ background }} }}']) {
+test('dangling, nested, or replacement-introduced opening delimiters cannot survive', () => {
+  for (const text of ['{{ background','{{ {{ background }} }}']) {
     assert.throws(()=>render(text),/Unresolved or malformed template delimiter/);
   }
   assert.throws(()=>renderTemplate('{{ injected }}',{injected:'{{ background }}'}),/Unresolved or malformed template delimiter/);
